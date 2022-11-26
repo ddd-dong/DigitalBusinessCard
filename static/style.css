@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins: 100,200,300,400,500,600,700,800,900');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;  
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg,rgb(45, 4, 59),rgb(12, 6, 90));
+}
+.c{
+    position: relative;
+    width: 350px;
+    height: 190px;
+    background: rgb(18, 14, 41);
+    transition: 0.5s;
+    border-radius:20px ;
+    box-shadow: 0 15px 50px rgba(116, 0, 77,5);
+}
+.c:hover{
+    height: 450px;
+}
+.c .line{
+    position: absolute;
+    inset: 0;
+    background: black;
+    overflow: hidden;
+    border-radius:20px ;
+}
+.c .line::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent,rgb(255, 0, 170),rgb(255, 20, 170),rgb(255, 30, 170),transparent);
+    animation: linerun 2s linear infinite;
+}
+@keyframes linerun{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+.c .line::after{
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: rgb(35, 27, 81);
+    border-radius:20px ;
+}
+.c .imgbox{
+    position: relative;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background:  rgb(0, 0, 0);
+    transition: 0.5s;
+   z-index: 10;
+    overflow: hidden;
+    border-radius:20px ;
+    box-shadow: 0 15px 50px rgba(0,130,134,5);
+}
+.c:hover .imgbox{
+    width: 250px;
+    height: 250px;
+ 
+}
+.c .imgbox::after{
+    content: '';
+    position: absolute;
+    inset: 5px;
+    background: rgb(35, 27, 81);
+    border-radius:20px ;
+}
+.c .imgbox::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent,rgb(0, 238, 255),rgb(0, 248, 255),rgb(0, 255, 255),transparent);
+    animation: linerun 4s linear infinite;
+}
+.c .imgbox img{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-radius:20px ;
+}
+.c .weibo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+
+}
+.c .weibo .detail{
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+    transform: 0.5s;
+   color: azure;
+   transform: translateY(200px);
+}
+.c:hover .weibo .detail{
+    transform: translateY(20px);
+}
+.c .weibo .detail h2{
+   font-size: 1.25em;
+   font-weight: 600;
+   color: aqua;
+   line-height: 1.2em;
+}
+.c .weibo .detail span{
+    font-size: 1.25em;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+.c .weibo .detail .me{
+    display: flex;  
+   justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.c .weibo .detail .app{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.c .weibo .detail .igbutton{
+   
+    display: flex;
+    background: linear-gradient(45deg,rgb(255, 255, 0),rgb(255, 0, 0));
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100;
+    border-radius: 5px;
+    box-shadow: 0 15px 50px rgba(247, 96, 255,5);
+    transition: 0.5s;
+}
+.c .weibo .detail .fbbutton{
+  
+    display: flex;
+    background: linear-gradient(45deg,rgb(0, 111, 158),rgb(17, 0, 255));
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100;
+    border-radius: 5px;
+    box-shadow: 0 15px 50px rgba(0,238,235,5);
+    transition: 0.5s;
+}
+.c .weibo .detail .ytbutton{
+
+    display: flex;
+    background: linear-gradient(45deg,rgb(255, 96, 96),rgb(255, 0, 0));
+    border: none;
+    color: white;
+    padding: 5px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100;
+    border-radius: 5px;
+    box-shadow: 0 15px 50px rgba(255, 0, 170,5);
+    transition: 0.5s;
+}
+
+.c .weibo .detail .ytbutton:hover {
+    transform: scale(1.05);
+    background: rgb(0, 0, 0);   
+
+}
+.ytbutton:hover span a{
+    color: red; 
+    font-weight: 600;
+}
+.ytbutton span  a{
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: 0.5s;
+
+}
+.c .weibo .detail .ytbutton:active {
+    transform: scale(1);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
+}
+.c .weibo .detail .fbbutton:hover {
+    transform: scale(1.05);
+    background: rgb(4, 4, 4);
+}
+.fbbutton:hover span a{
+    color: rgb(77, 225, 255); 
+    font-weight: 600;
+}
+.fbbutton span  a{
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: 0.5s;
+
+}
+.c .weibo .detail .fbbutton:active {
+    transform: scale(1);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
+}
+.c .weibo .detail .igbutton:hover {
+    transform: scale(1.05);
+    background: rgb(4, 4, 4);
+}
+.igbutton:hover span a{
+    color: rgb(255, 126, 255); 
+    font-weight: 600;
+}
+.igbutton span  a{
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: 0.5s;
+
+}
+.c .weibo .detail .igbutton:active {
+    transform: scale(1);
+    box-shadow: inset 0 0 10px 1px rgba(0, 0, 0, .2);
+}
+.lebtn {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    top: 30px;
+   justify-content: center;
+}
+.lebtn a{
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    transition: 0.5s;
+    background: linear-gradient(45deg,rgb(45, 4, 59),rgb(12, 6, 90));
+    color: #fff;
+}
+.lebtn a:hover{
+    transform: rotate(315deg);
+    box-shadow: 0 0 60px 0 #fff;
+    color: black;
+    background: #ffffff;
+    transition: 0.5s;
+}
+.lebtn a:active{
+    transform: scale(1.05);
+}
